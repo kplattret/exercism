@@ -9,11 +9,13 @@ defmodule RnaTranscription do
   """
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
-    mapping = %{"G": "C", "C": "G", "T": "A", "A": "U"}
-    string = to_string(dna)
-    letters_in = String.upcase(string) |> String.graphemes
-    letters_out = Enum.map(letters_in, fn letter -> mapping[String.to_atom(letter)] end)
+    mapping = %{
+      ?G => ?C,
+      ?C => ?G,
+      ?T => ?A,
+      ?A => ?U
+    }
 
-    to_charlist(Enum.join(letters_out))
+    Enum.map(dna, &(mapping[&1]))
   end
 end

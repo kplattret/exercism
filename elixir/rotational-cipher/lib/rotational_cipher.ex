@@ -1,6 +1,6 @@
 defmodule RotationalCipher do
-  @lowercase 'abcdefghijklmnopqrstuvwxyz'
-  @uppercase 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  @lowercase ?a..?z
+  @uppercase ?A..?Z
 
   @doc """
   Given a plaintext and amount to shift by, return a rotated string.
@@ -20,8 +20,8 @@ defmodule RotationalCipher do
   defp rotate_when_relevant(charlist, shift) do
     Enum.map(charlist, fn char ->
       cond do
-        Enum.member?(@lowercase, char) -> apply_rotation(@lowercase, char, shift)
-        Enum.member?(@uppercase, char) -> apply_rotation(@uppercase, char, shift)
+        char in @lowercase -> apply_rotation(@lowercase, char, shift)
+        char in @uppercase -> apply_rotation(@uppercase, char, shift)
         true -> char
       end
     end)

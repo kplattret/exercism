@@ -19,8 +19,7 @@ defmodule WordCount do
 
   defp convert_to_list(string) do
     string
-    |> String.replace(~r/[:!&@$%^_,]/, " ")
     |> String.downcase
-    |> String.split
+    |> String.split(~r{[ ,:_!&@$%^]}, trim: true)
   end
 end

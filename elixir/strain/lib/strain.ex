@@ -7,7 +7,7 @@ defmodule Strain do
   """
   @spec keep(list :: list(any), fun :: (any -> boolean)) :: list(any)
   def keep(list, fun) do
-    Enum.reverse(Map.get(results(list, fun), :keep))
+    for el <- list, fun.(el), do: el
   end
 
   @doc """
@@ -18,16 +18,6 @@ defmodule Strain do
   """
   @spec discard(list :: list(any), fun :: (any -> boolean)) :: list(any)
   def discard(list, fun) do
-    Enum.reverse(Map.get(results(list, fun), :discard))
-  end
-
-  defp results(list, fun) do
-    Enum.reduce(list, %{keep: [], discard: []}, fn el, map ->
-      if fun.(el) do
-        Map.update!(map, :keep, &([el | &1]))
-      else
-        Map.update!(map, :discard, &([el | &1]))
-      end
-    end)
+    for el <- list, !fun.(el), do: el
   end
 end

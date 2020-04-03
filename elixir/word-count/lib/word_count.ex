@@ -20,6 +20,6 @@ defmodule WordCount do
   defp convert_to_list(string) do
     string
     |> String.downcase
-    |> String.split(~r{[ ,:_!&@$%^]}, trim: true)
+    |> String.split(~r/[^[:alnum:]-]/u, trim: true)
   end
 end

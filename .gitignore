@@ -1,0 +1,9 @@
+# C# build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# System files
+.DS_Store

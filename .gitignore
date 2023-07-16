@@ -5,5 +5,13 @@ x64/
 [Bb]in/
 [Oo]bj/
 
+# Node.js
+.pnp.cjs
+.pnp.loader.mjs
+.yarn
+node_modules
+package-lock.json
+yarn.lock
+
 # System files
 .DS_Store

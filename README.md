@@ -4,8 +4,7 @@ My personal solutions to code challenges on [exercism.org](https://exercism.org/
 
 ## First steps
 
-Install and configure the [Exercism
-CLI](https://exercism.org/docs/using/solving-exercises/working-locally).
+Install and configure the [Exercism CLI](https://exercism.org/docs/using/solving-exercises/working-locally).
 
 ## Elixir
 
@@ -66,8 +65,5 @@ Submit the working solution to Exercism:
 $ exercism submit
 ```
 
-_Note: if working on a fresh copy of this repository, overwrite the challenge first:_
-
-```sh
-$ exercism download --exercise=hello-world --track=typescript --force
-```
+_Note: if running/testing an existing challenge on a fresh copy of this repository, you will need to
+overwrite it first using the `--force` flag in the corresponding `exercism download` command._

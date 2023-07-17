@@ -2,6 +2,33 @@
 
 My personal solutions to code challenges on [exercism.org](https://exercism.org/profiles/kplattret).
 
+## First steps
+
+Install and configure the [Exercism
+CLI](https://exercism.org/docs/using/solving-exercises/working-locally).
+
+## Elixir
+
+In the `./elixir` folder, download a challenge, for instance:
+
+```sh
+$ cd elixir
+$ exercism download --exercise=hello-world --track=elixir
+```
+
+In the root folder of a challenge, run the tests to drive the development:
+
+```sh
+$ cd hello-world
+$ mix test
+```
+
+Submit the working solution to Exercism:
+
+```sh
+$ exercism submit
+```
+
 ## TypeScript
 
 In the `./typescript` folder, download a challenge, for instance:
@@ -33,7 +60,13 @@ Then run the tests to drive the development:
 $ yarn test
 ```
 
-If working on a fresh copy of this repository, overwrite the challenge first:
+Submit the working solution to Exercism:
+
+```sh
+$ exercism submit
+```
+
+_Note: if working on a fresh copy of this repository, overwrite the challenge first:_
 
 ```sh
 $ exercism download --exercise=hello-world --track=typescript --force

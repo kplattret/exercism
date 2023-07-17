@@ -1,17 +1,27 @@
-# C# build results
+# General
+.DS_Store
+
+# C# (.NET)
 [Dd]ebug/
 [Rr]elease/
 x64/
 [Bb]in/
 [Oo]bj/
 
-# Node.js
+# Elixir
+*.ez
+*.tar
+.fetch
+_build
+cover
+deps
+doc
+erl_crash.dump
+
+# TypeScript (Node.js)
 .pnp.cjs
 .pnp.loader.mjs
 .yarn
 node_modules
 package-lock.json
 yarn.lock
-
-# System files
-.DS_Store
